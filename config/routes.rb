@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   get "/movies/:id", controller: "movies", action: "movie_method"
   
 
-  get "/movies/all", controller: "movies", action: "all_movies_method"
+  get "/movies", controller: "movies", action: "all_movies_method"
 end
 
