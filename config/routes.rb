@@ -14,7 +14,13 @@ Rails.application.routes.draw do
 
   get "/movies", controller: "movies", action: "all_movies_method"
 
+
+  #create a route that will display a single actor using a query parameter
   get "/actors" => "actors#actor_method"
+
+
+  #create a route that will display a single actor using a url segment parameter
+  
 
   
 end
