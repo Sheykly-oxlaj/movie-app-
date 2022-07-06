@@ -24,6 +24,9 @@ Rails.application.routes.draw do
 
   get "/actors/:first_name" => "actors#actor_url_method"
 
+  #create a route that will display a single actor using a body parameter (use the Rest Client)
+  post "/actors" => "actors#actor_body_parameter_method"
+
   
 end
 
