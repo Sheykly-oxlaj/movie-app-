@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  get "/actor/:id", controller: "actors", action: "actor_method"
 
   #How to access it on the web 
   #http://localhost:3000/actor/3
@@ -14,5 +13,9 @@ Rails.application.routes.draw do
   
 
   get "/movies", controller: "movies", action: "all_movies_method"
+
+  get "/actors" => "actors#actor_method"
+
+  
 end
 
