@@ -20,3 +20,12 @@ Content-Type: application/json
 {
   "first_name": "Andrew"
 }
+
+
+###
+POST http://localhost:3000/actors.json
+Content-Type: application/json
+
+{
+  "id": "4"
+}

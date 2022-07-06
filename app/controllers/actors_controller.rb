@@ -24,10 +24,16 @@ class ActorsController < ApplicationController
   end 
 
 
+  # def actor_body_parameter_method
+  #    first_name = request.POST[:first_name]
+  #    actor = Actor.find_by(first_name: first_name)
+  #    render json: actor.as_json
+  # end 
+
   def actor_body_parameter_method
-     first_name = request.POST[:first_name]
-     actor = Actor.find_by(first_name: first_name)
-     render json: actor.as_json
-  end 
+    id = request.POST[:id]
+    actor = Actor.find_by(id: id)
+    render json: actor.as_json
+ end 
 
 end
