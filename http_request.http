@@ -31,3 +31,36 @@ Content-Type: application/json
 
 ### Destroy route
 DELETE http://localhost:3000/actors/17.json
+
+
+###############################################################
+### Index route 
+GET http://localhost:3000/movies.json
+
+### Show route
+# GET http://localhost:3000/movies/:id.json
+GET http://localhost:3000/movies/6.json
+
+### Create route
+POST http://localhost:3000/movies.json
+Content-Type: application/json
+
+{
+  "title": "My Girl", 
+  "year": "1991", 
+  "plot": "Tomboy Vada Sultenfuss (Anna Chlumsky) has good reason to be morbid: her mother died giving birth to her, and her father (Dan Aykroyd) operates a funeral service out of their home. The other kids think she's a freak, and it certainly doesn't help that her best friend, Thomas J. Sennett (Macaulay Culkin), is a boy. To make matters worse, Vada is desperately in love with her English teacher, Mr. Bixler (Griffin Dunne). What's an 11-year-old girl to do?"
+}
+
+### Update route
+#can use PATCH or PUT
+
+PATCH http://localhost:3000/movies/7.json
+Content-Type: application/json
+
+{
+  "year": "1991"
+}
+
+
+### Destroy route
+DELETE http://localhost:3000/movies/8.json
