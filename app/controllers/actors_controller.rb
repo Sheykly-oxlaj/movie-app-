@@ -8,8 +8,13 @@ class ActorsController < ApplicationController
   # end 
 
   #uses first_name, it is case sensitive
-  def actor_method
+  def actor_query_method
     actor = Actor.find_by(first_name: params["first_name"])
+    render json: actor.as_json
+  end 
+
+  def actor_url_method
+    actor = Actor.find_by(id: params["id"])
     render json: actor.as_json
   end 
 
