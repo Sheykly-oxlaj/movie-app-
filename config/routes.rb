@@ -1,32 +1,19 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # GET "/actors" - Gets all the actors we have
+  get "/actors" => "actors#index"
 
+  # GET "/actors/3" - Just get one specific actor (that already exists)
+  get "/actors/:id" => "actors#show"
 
-  #How to access it on the web 
-  #http://localhost:3000/actor/3
+  # POST "/actors" - Creates a new actor, add it to our database
+  post "/actors" => "actors#create"
 
+  # PATCH "/actors/3" - Updates a specific actor
+  patch "/actors/:id" => "actors#update"
 
-  get "/movies/:id", controller: "movies", action: "movie_method"
-  
+  # DELETE "/actors/3" - Deletes a specific actor
+  delete "/actors/:id" => "actors#destroy"
 
-  get "/movies", controller: "movies", action: "all_movies_method"
-
-
-  #create a route that will display a single actor using a query parameter
-  get "/actors" => "actors#actor_query_method"
-
-
-  #create a route that will display a single actor using a url segment parameter
-  # get "/actors/:id" => "actors#actor_url_method"
-
-  get "/actors/:first_name" => "actors#actor_url_method"
-
-  #creates a route that will display a single actor using a body parameter (use the Rest Client)
-  post "/actors" => "actors#actor_body_parameter_method"
-
-  
 end
 

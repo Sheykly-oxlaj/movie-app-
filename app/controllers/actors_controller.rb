@@ -1,39 +1,43 @@
 class ActorsController < ApplicationController
 
-  #method/action that uses query method (params)
-  #uses id 
-  # def actor_method
-  #   actor = Actor.find_by(id: params["id"])
-  #   render json: actor.as_json
-  # end 
+  def index 
+    actors = Actor.all
+    render json: actors.as_json
+  end 
 
-  #uses first_name, it is case sensitive
-  def actor_query_method
-    actor = Actor.find_by(first_name: params["first_name"])
+  def show 
+    actor = Actor.find_by(id: params["id"])
     render json: actor.as_json
   end 
 
-  # def actor_url_method
-  #   actor = Actor.find_by(id: params["id"])
-  #   render json: actor.as_json
-  # end 
-
-  def actor_url_method
-    actor = Actor.find_by(first_name: params["first_name"])
+  def create
+    actor = Actor.new(
+      first_name: params["first_name"],
+      last_name: params["last_name"],
+      known_for: params["known_for"]
+    )
+    actor.save
     render json: actor.as_json
   end 
 
+  def update
+    actor = Actor.find_by(id: params["id"])
 
-  # def actor_body_parameter_method
-  #    first_name = request.POST[:first_name]
-  #    actor = Actor.find_by(first_name: first_name)
-  #    render json: actor.as_json
-  # end 
-
-  def actor_body_parameter_method
-    id = request.POST[:id]
-    actor = Actor.find_by(id: id)
+      actor.first_name = params["first_name"] || actor.first_name,
+      actor.last_name = params["last_name"] || actor.last_name,
+      actor.known_for = params["known_for"] ||  actor.known_for,
+      #The actor.first_name is whatever paramaeter is passed, or, if no parameter is passed, it stays the same...
+    
+    actor.save
     render json: actor.as_json
- end 
 
+  end 
+
+
+  def destroy
+    actor = Actor.find_by(id: params["id"])
+    actor.destroy
+    render json: {message: "Actor succesfully deleted"}
+  end 
+ 
 end

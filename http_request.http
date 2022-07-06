@@ -1,31 +1,33 @@
 require "http"
 system "clear"
 
-response = HTTP.get("http://localhost:3000/movies").parse(:json)
-pp response
+### Index route 
+GET http://localhost:3000/actors.json
 
-# response = HTTP.get("http://localhost:3000/movies.json")
-# pp response
-# ###
-# GET http://localhost:3000/movies.json
+### Show route
+# GET http://localhost:3000/actors/:id.json
+GET http://localhost:3000/actors/17.json
 
-
-
-
-###
-
+### Create route
 POST http://localhost:3000/actors.json
 Content-Type: application/json
 
 {
-  "first_name": "Andrew"
+  "first_name": "Leonardo", 
+  "last_name": "DiCarpio", 
+  "known_for": "Titanic"
 }
 
+### Update route
+#can use PATCH or PUT
 
-###
-POST http://localhost:3000/actors.json
+PATCH http://localhost:3000/actors/17.json
 Content-Type: application/json
 
 {
-  "id": "4"
+  "last_name": "DiCaprio"
 }
+
+
+### Destroy route
+DELETE http://localhost:3000/actors/17.json
