@@ -20,7 +20,9 @@ Rails.application.routes.draw do
 
 
   #create a route that will display a single actor using a url segment parameter
-  get "/actors/:id" => "actors#actor_url_method"
+  # get "/actors/:id" => "actors#actor_url_method"
+
+  get "/actors/:first_name" => "actors#actor_url_method"
 
   
 end
