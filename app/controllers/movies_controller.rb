@@ -15,6 +15,7 @@ class MoviesController < ApplicationController
       title: params["title"],
       year: params["year"],
       plot: params["plot"]
+      director: params["director"]
     )
     movie.save
     render json: movie.as_json
@@ -26,6 +27,7 @@ class MoviesController < ApplicationController
     movie.title = params["title"] || movie.title
     movie.year = params["year"] || movie.year
     movie.plot = params["plot"] ||  movie.plot
+    movie.director = params["director"] ||  movie.director
     movie.save
     render json: movie.as_json
 
