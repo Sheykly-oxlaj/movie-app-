@@ -14,7 +14,9 @@ class ActorsController < ApplicationController
     actor = Actor.new(
       first_name: params["first_name"],
       last_name: params["last_name"],
-      known_for: params["known_for"]
+      age: params["age"],
+      gender: params["gender"],
+      age: params["known_for"],
     )
     actor.save
     render json: actor.as_json
@@ -26,6 +28,8 @@ class ActorsController < ApplicationController
       actor.first_name = params["first_name"] || actor.first_name,
       actor.last_name = params["last_name"] || actor.last_name,
       actor.known_for = params["known_for"] ||  actor.known_for,
+      actor.gender = params["gender"] ||  actor.gender,
+      actor.age = params["age"] ||  actor.age,
       #The actor.first_name is whatever paramaeter is passed, or, if no parameter is passed, it stays the same...
     
     actor.save
