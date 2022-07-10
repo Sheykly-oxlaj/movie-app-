@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     movie = Movie.new(
       title: params["title"],
       year: params["year"],
-      plot: params["plot"]
+      plot: params["plot"],
       director: params["director"]
     )
     movie.save
