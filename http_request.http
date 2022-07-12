@@ -102,3 +102,14 @@ Content-Type: application/json
   "plot": "",
   "director": ""
 }
+
+###
+PATCH http://localhost:3000/movies/7.json
+Content-Type: application/json
+
+{
+  "title": "",
+  "year": "",
+  "plot": "",
+  "director": ""
+}
