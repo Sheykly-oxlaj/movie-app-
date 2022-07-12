@@ -64,3 +64,17 @@ Content-Type: application/json
 
 ### Destroy route
 DELETE http://localhost:3000/movies/8.json
+
+
+
+###post request to test actor validations
+POST http://localhost:3000/actors.json
+Content-Type: application/json
+
+{
+  "first_name": "A", 
+  "last_name": "K", 
+  "known_for": "", 
+  "age": 11, 
+  "gender": "F"
+}
