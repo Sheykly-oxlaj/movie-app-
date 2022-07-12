@@ -79,6 +79,19 @@ Content-Type: application/json
   "gender": "F"
 }
 
+
+###
+PATCH http://localhost:3000/actors/7.json
+Content-Type: application/json
+
+{
+  "first_name": "A", 
+  "last_name": "K", 
+  "known_for": "", 
+  "age": 11, 
+  "gender": "F"
+}
+
 ###post request to test movie validations
 POST http://localhost:3000/movies.json
 Content-Type: application/json
