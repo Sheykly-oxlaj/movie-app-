@@ -8,4 +8,9 @@ validates :last_name, length: { minimum: 2 }
 validates :known_for, presence: true # an actor is not valid without a known_for listed/included
 # Make it so that a Actor must have an age over 13 to be listed on the site.
 validates :age, numericality: {greater_than: 5}
+
+def movie_plot
+  Movie.where(actor_id: id)
+end 
+
 end
