@@ -78,3 +78,14 @@ Content-Type: application/json
   "age": 11, 
   "gender": "F"
 }
+
+###post request to test movie validations
+POST http://localhost:3000/movies.json
+Content-Type: application/json
+
+{
+  "title": "",
+  "year": "",
+  "plot": "",
+  "director": ""
+}
