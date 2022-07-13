@@ -10,7 +10,7 @@ validates :known_for, presence: true # an actor is not valid without a known_for
 validates :age, numericality: {greater_than: 5}
 
 def movie_plot
-  Movie.where(actor_id: id)
+Movie.where(id: movie_id) #LOOK IN THE MOVIE TABLE, FOR THE MOVIE WITH AN ID THAT MATCHES THE MOVIE_ID IN MY ACTOR TABLE. 
 end 
 
 end
