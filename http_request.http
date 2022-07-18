@@ -135,3 +135,17 @@ Content-Type: application/json
   "email": "claire@example.com",
   "password": "password"
 }
+
+
+
+### Photos create
+POST http://localhost:3000/movies.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyMDM4MTZ9.lZ0Hf0rX-CvkVCHCVNxlBU_AlUx3OEllqFG8H2jQoSA
+Content-Type: application/json
+
+{
+  "title": "Uncle Buck",
+  "year": "1989",
+  "plot": "When Cindy (Elaine Bromka) and her husband, Bob (Garrett M. Brown), have to leave town for a family emergency, there is only one person available to babysit for their three kids: Bob's lazy, carefree brother, Buck (John Candy). While he immediately gets along with the two younger children (Gaby Hoffman, Macaulay Culkin), Buck must change his bachelor lifestyle if he wants to be a responsible caregiver for the angst-filled teenager, Tia (Jean Louisa Kelly).",
+  "director": "John Hughes"
+}
