@@ -113,3 +113,15 @@ Content-Type: application/json
   "plot": "",
   "director": ""
 }
+
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Claire Dunphy",
+  "email": "claire@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
