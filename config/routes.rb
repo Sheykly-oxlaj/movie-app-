@@ -15,21 +15,23 @@ Rails.application.routes.draw do
   # DELETE "/actors/3" - Deletes a specific actor
   delete "/actors/:id" => "actors#destroy"
 
-#############################################################
+  #############################################################
 
-   # GET "/movies" - Gets all the movies we have
-   get "/movies" => "movies#index"
+  # GET "/movies" - Gets all the movies we have
+  get "/movies" => "movies#index"
 
-   # GET "/movies/3" - Just get one specific movie (that already exists)
-   get "/movies/:id" => "movies#show"
- 
-   # POST "/movies" - Creates a new movie, add it to our database
-   post "/movies" => "movies#create"
- 
-   # PATCH "/movies/3" - Updates a specific movie
-   patch "/movies/:id" => "movies#update"
- 
-   # DELETE "/movies/3" - Deletes a specific movie
-   delete "/movies/:id" => "movies#destroy"
+  # GET "/movies/3" - Just get one specific movie (that already exists)
+  get "/movies/:id" => "movies#show"
+
+  # POST "/movies" - Creates a new movie, add it to our database
+  post "/movies" => "movies#create"
+
+  # PATCH "/movies/3" - Updates a specific movie
+  patch "/movies/:id" => "movies#update"
+
+  # DELETE "/movies/3" - Deletes a specific movie
+  delete "/movies/:id" => "movies#destroy"
+
+  #user create route
+  post "/users" => "users#create"
 end
-
