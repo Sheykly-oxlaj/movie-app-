@@ -4,6 +4,9 @@ system "clear"
 ### Index route 
 GET http://localhost:3000/actors.json
 
+
+
+
 ### Show route
 # GET http://localhost:3000/actors/:id.json
 GET http://localhost:3000/actors/17.json
@@ -148,4 +151,17 @@ Content-Type: application/json
   "year": "1989",
   "plot": "When Cindy (Elaine Bromka) and her husband, Bob (Garrett M. Brown), have to leave town for a family emergency, there is only one person available to babysit for their three kids: Bob's lazy, carefree brother, Buck (John Candy). While he immediately gets along with the two younger children (Gaby Hoffman, Macaulay Culkin), Buck must change his bachelor lifestyle if he wants to be a responsible caregiver for the angst-filled teenager, Tia (Jean Louisa Kelly).",
   "director": "John Hughes"
+}
+
+
+### Photos create
+POST http://localhost:3000/movies.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTgyMDUxMDJ9.ERQASxxIP5hc9r6g-wMV8Wd4Ezqr4UIxNLnA86Wsrio
+Content-Type: application/json
+
+{
+  "title": "The Gold Diggers",
+  "year": "1995",
+  "plot": "Beth (Christina Ricci) is a city mouse who's just arrived in the country. When her family relocates to a leafy area in the state of Washington, Beth starts hanging out with outsider Jody (Anna Chlumsky), who is constantly regaling Beth with a local legend about a woman named Molly Morgan (Amy Kirk) that supposedly hid a treasure somewhere on nearby Bear Mountain. When the girls decide to tackle Bear Mountain together, Beth learns about the not-so-happy situation Jody is dealing with at home.",
+  "director": "Kevin James Dobson"
 }

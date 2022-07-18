@@ -1,5 +1,4 @@
 class Actor < ApplicationRecord
-  before_action :authenticate_admin, except: [:index, :show]
   belongs_to :movie
   # Make it so that a Actor must have a first_name with a length of at least 2.
   validates :first_name, length: { minimum: 2 }
