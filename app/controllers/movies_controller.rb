@@ -2,8 +2,8 @@ class MoviesController < ApplicationController
   before_action :authenticate_admin, except: [:index, :show]
 
   def index
-    movies = Movie.all
-    render json: movies.as_json
+    @movies = Movie.all
+    render template: "movies/index"
   end
 
   def show
