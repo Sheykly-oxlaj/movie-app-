@@ -165,3 +165,12 @@ Content-Type: application/json
   "plot": "Beth (Christina Ricci) is a city mouse who's just arrived in the country. When her family relocates to a leafy area in the state of Washington, Beth starts hanging out with outsider Jody (Anna Chlumsky), who is constantly regaling Beth with a local legend about a woman named Molly Morgan (Amy Kirk) that supposedly hid a treasure somewhere on nearby Bear Mountain. When the girls decide to tackle Bear Mountain together, Beth learns about the not-so-happy situation Jody is dealing with at home.",
   "director": "Kevin James Dobson"
 }
+
+### movie genres create
+POST http://localhost:3000/movie_genres.json
+Content-Type: application/json
+
+{
+   "movie_id": "3",
+   "genre_id": "4"
+}
